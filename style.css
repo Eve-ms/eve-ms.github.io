@@ -73,9 +73,9 @@ header {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .header-container {
-        grid-template-columns: 0.2fr 9rem 1fr;
+        grid-template-columns: 0.2fr 8rem 1fr;
         gap: 2rem;
     }
 }
@@ -99,11 +99,15 @@ header {
         grid-template-columns: 1fr 0.1rem 1fr;
         padding-top:0;
         max-height: 7rem;
+        gap:0;
     }
 }
 
 .logo{
+    height: 6rem;
     display: grid;
+    justify-self: center;
+    align-self: center;
 }
 
 .logo img{
@@ -130,10 +134,10 @@ header {
 .nav1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 3rem;
     justify-items: center;
     align-items: center;
-    padding-left:3rem;
+    padding-left:2.6rem;
 }
 
 .nav1 a{
@@ -154,7 +158,7 @@ header {
     .nav1 {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3,2rem);
-        gap:3rem;
+        gap:2rem;
         padding-left:0;
     }
 }
@@ -188,6 +192,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     margin: 0.5rem;
+    padding-left:2rem;
 }
 
 .nav2 a:hover{
@@ -195,12 +200,17 @@ header {
     cursor:url('cursor2.svg'), auto;
 }
 
+@media (max-width: 1200px) {
+    .nav2 {
+        padding-left:0;
+    }
+}
 
 @media (max-width: 900px) {
     .nav2 {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3,2rem);
-        gap:3rem;
+        gap:2rem;
         padding:0;
     }
 }
@@ -218,15 +228,6 @@ header {
     .nav2 a{
        font-size: 35px;
     }
-}
-
-
-
-.logo{
-    height: 6rem;
-    display: grid;
-    justify-self: center;
-    align-self: center;
 }
 
 a.insta{
@@ -251,35 +252,28 @@ insta img:hover{
     }
 }
 
+
 h1{
-    display: grid;
-    margin: 0;
-}
-
-h1 a{
-    text-decoration: none;
-    color:#000000;
-}
-
-h1 a:hover{
-    color:#296537;
-    cursor:url('cursor2.svg'), auto;
+    display:grid;
+    font-weight:600;
+    font-size: 28px;
+    margin:0;
 }
 
 h2{
-    display: grid;
-    margin:0;
-    font-size: 18px;
-    font-weight: 400;
-    color:#000000;
+    display:grid;
+    font-weight:500;
+    font-size: 25px;
+    margin-top:2rem;
+    margin-bottom:0;
 }
-
 
 h3{
     display: grid;
-    font-weight: 600;
-    padding-right: 10px;
+    font-weight:500;
+    padding-right:10px;
 }
+
 
 .projets{
     display: grid;
@@ -296,11 +290,12 @@ h3{
     }
 }
 
+
 .projet ul{
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    min-width: 17rem;
+    min-width: 18rem;
     padding-left: 0;
     margin: 0;
 }
@@ -332,6 +327,11 @@ h3{
     }
 }
 
+@media (max-width: 900px) {
+    .projet a{
+        font-size:17px;
+    }
+}
 
 @media (max-width: 480px) {
     .projet{
@@ -414,6 +414,7 @@ h3{
     cursor:url('cursor2.svg'), auto;
 }
 
+
 .colonnes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -426,6 +427,9 @@ h3{
     .colonnes{
        padding-right:0;
        padding-left:1rem;
+       grid-template-rows:repeat(2);
+       grid-template-columns: none;
+       gap:0;
     }
 }
 
@@ -437,7 +441,7 @@ h3{
     color:#0c471ac8;
     background-color:#cfde85;
     border-radius: 15px;
-    font-weight: 500;
+    font-weight:360;
 }
 
 @media (max-width: 900px) {
@@ -455,7 +459,7 @@ h3{
 
 @media (max-width: 480px) {
     .text {
-        font-size: 13px;
+        font-size: 17px;
     }
 }
 
@@ -479,84 +483,49 @@ h3{
 
 
 .g{
-    background-color:#2323231d;
+    background-color:#000000;
     /*fond des vidéos, dans polke*/
     border-radius: 15px;
 }
 
-.video{
+.i{
     position:relative;
     width: 100%;
-    height:25rem;
+    height:23rem;
     border-radius: 15px;
 }
 
 @media (max-width: 480px) {
-    .video {
-        height:8rem;
+    .i {
+        height:17rem;
     }
+
+}
+.video{
+    position:relative;
+    width: 100%;
+    height:auto;
+    border-radius: 15px;
 }
 
 
 .about{
     display: grid;
     padding:1.5rem;
-    grid-template-rows: 2rem auto;
     margin-left: 3.5rem;
-    margin-right:3.5rem;
+    max-width:45rem;
 }
 
-.sur{
-    display:grid;
-    justify-content: left;
-    color:#000000;
-}
-
-.sur h3{
-    padding:0;
-    margin:0;
-}
-
-.sur a{
-    font-size: 25px;
+.esad{
     text-decoration: none;
     color:#000000;
 }
 
-.sur a:hover{
-    cursor:url('cursor2.svg'), auto;
+.esad:hover{
     color:#296537;
+    cursor:url('cursor2.svg'), auto;
 }
 
-.sous{
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    justify-content: left;
-}
-
-@media (max-width: 480px) {
-    .sous {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.sous ul{
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    min-width:max-content;
-    padding:1rem;
-    margin:0;
-}
-
-
-.sous a{
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
 
 
 .pictures {
@@ -575,6 +544,11 @@ h3{
     }
 }
 
+.picture a{
+    display:grid;
+    max-width: auto;
+}
+
 .picture-a {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -583,21 +557,6 @@ h3{
     gap:0.7rem;
     margin:2rem;
     margin-top: 0;
-}
-
-.picture-b {
-    display: grid;
-    grid-template-columns: repeat(3,15rem);
-    justify-content: center;
-    height:fit-content;
-    gap:0.7rem;
-    margin:2rem;
-    margin-top: 0;
-}
-
-.picture a{
-    display:grid;
-    max-width: auto;
 }
 
 .picture-a a:hover{
@@ -618,6 +577,16 @@ h3{
     .picture-a a:hover {
         transform:none;
     }
+}
+
+.picture-b {
+    display: grid;
+    grid-template-columns: repeat(3,15rem);
+    justify-content: center;
+    height:fit-content;
+    gap:0.7rem;
+    margin:2rem;
+    margin-top: 0;
 }
 
 @media (max-width: 480px) {
